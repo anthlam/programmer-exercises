@@ -2,7 +2,7 @@ class TipCalculator
   attr_reader :tip
   attr_reader :total
 
-  def initialize(bill_amount, tip_rate)
+  def initialize(bill_amount, tip_rate = 0)
     @bill_amount = bill_amount
     @tip_rate = tip_rate
   end

@@ -25,4 +25,15 @@ class TipCalculatorTest < Test::Unit::TestCase
     assert_equal expected_tip, tip_calc.tip
     assert_equal expected_total, tip_calc.total
   end
+
+  def test_no_tip
+    bill_amount = 21.47
+    expected_tip = 0.00
+    expected_total = 21.47
+
+    tip_calc = TipCalculator.new(bill_amount).calculate
+
+    assert_equal expected_tip, tip_calc.tip
+    assert_equal expected_total, tip_calc.total
+  end
 end
