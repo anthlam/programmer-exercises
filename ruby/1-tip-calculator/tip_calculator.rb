@@ -16,7 +16,7 @@ class TipCalculator
   private
 
   def calculate_tip
-    @bill_amount * (@tip_rate/100.0)
+    (@bill_amount * (@tip_rate/100.0)).round(2)
   end
 
   def calculate_total
